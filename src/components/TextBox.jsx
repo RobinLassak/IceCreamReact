@@ -1,6 +1,6 @@
 import React from "react";
 
-function TextBox({ label, dataIn, handleData, id }) {
+function TextBox({ label, handleData, id, selectedValue }) {
   const handleChange = (e) => {
     handleData(e.target.value, id);
   };
@@ -13,7 +13,7 @@ function TextBox({ label, dataIn, handleData, id }) {
         type="text"
         className="form-control"
         onChange={handleChange}
-        value={dataIn}
+        value={selectedValue}
         id={id}
       />
     </>

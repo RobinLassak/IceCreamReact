@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import RbGroup from "./components/RbGroup";
 import ChbGroup from "./components/ChbGroup";
@@ -20,19 +20,29 @@ function App() {
   const [disk, setDisk] = useState(40);
   const zacatekOdpocitavani = 20;
   const [odpocitavani, setOdpocitavani] = useState(zacatekOdpocitavani);
-  const [scitanec1, setScitanec1] = useState(0);
+  const [scitanec1, setScitanec1] = useState("");
   const [scitanec2, setScitanec2] = useState("");
   const [text, setText] = useState("");
   const [soubor, setSoubor] = useState("");
   const [vysledek, setVysledek] = useState("");
+  const promptyZobrazeny = useRef(false);
 
   useEffect(() => {
-    let temp;
-    while (temp === null || isNaN(temp) || temp.trim() === "") {
-      temp = prompt("Zadejte prvního člena součtu");
-    }
+    if (!promptyZobrazeny.current) {
+      let temp1;
+      while (temp1 === null || isNaN(temp1) || temp1.trim() === "") {
+        temp1 = prompt("Zadejte prvního člena součtu");
+      }
+      setScitanec1(temp1);
 
-    setScitanec1(parseFloat(temp));
+      let temp2;
+      while (temp2 === null || isNaN(temp2) || temp2.trim() === "") {
+        temp2 = prompt("Zadejte druhého člena součtu");
+      }
+      setScitanec2(temp2);
+      
+      promptyZobrazeny.current = true;
+    }
   }, []);
 
   const handlerEvent = (source) => {
@@ -121,8 +131,8 @@ function App() {
     }
   };
 
-  console.log(scitanec1);
-  console.log(scitanec2);
+  console.log("scitanec1:", scitanec1);
+  console.log("scitanec2:", scitanec2);
 
   return (
     <div className="bg-info-subtle vw-100 vh-100 py-5">
@@ -216,7 +226,6 @@ function App() {
                   <TextBox
                     label="Scitanec 1:"
                     id="scitanec1"
-                    dataIn={scitanec1}
                     selectedValue={scitanec1}
                     handleData={handleData}
                   />
@@ -225,7 +234,6 @@ function App() {
                   <TextBox
                     label="Scitanec 2:"
                     id="scitanec2"
-                    dataIn={scitanec2}
                     selectedValue={scitanec2}
                     handleData={handleData}
                   />
