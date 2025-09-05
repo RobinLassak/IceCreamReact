@@ -66,6 +66,6 @@ jobs:
           protocol: ftps
           port: 21
           passive: true
-          server-dir: ${{ secrets.FTP_DIR }}DogsShelterReact/
+          server-dir: ${{ secrets.FTP_DIR }}IceCreamReact/
           local-dir: ./empty/
           dangerous-clean-slate: true
