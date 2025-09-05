@@ -61,8 +61,13 @@ function App() {
   };
 
   const handleSouborDoTextArea = () => {
-    console.log("Aktuální obsah souboru:", soubor);
-    setText(soubor);
+    if (soubor) {
+      console.log("Načítám obsah souboru do TextArea:", soubor);
+      setText(soubor);
+    } else {
+      console.log("Žádný soubor nebyl vybrán");
+      setText("Žádný soubor nebyl vybrán");
+    }
   };
 
   useEffect(() => {
@@ -108,9 +113,8 @@ function App() {
       case "textArea":
         setText(data);
         break;
-      case "vyberSoubor":
+      case "vyberSouboru":
         setSoubor(data);
-        setText(data);
         break;
       default:
         break;
