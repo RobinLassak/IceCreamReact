@@ -6,20 +6,21 @@ function Range({ min, max, label, handleData, dataIn,id }) {
   };
 
   return (
-    <>
+    <div className="d-flex flex-column align-items-center">
       <label className="form-label" htmlFor={id}>
         {label}
       </label>
       <input
         type="range"
-        className="form-range w-100"
+        className="form-range"
         min={min}
         max={max}
         onChange={handleChange}
         id={id}
         value={dataIn}
+        style={{ maxWidth: '80%' }}
       />
-    </>
+    </div>
   );
 }
 

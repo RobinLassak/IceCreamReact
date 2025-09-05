@@ -1,4 +1,46 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
+  background-color: #d1ecf1 !important;
+  min-height: 100vh;
+}
+
+
+/* Responzivní úpravy pro mobilní zařízení - vyšší priorita */
+@media (max-width: 768px) {
+  .bg-warning-subtle {
+    text-align: center !important;
+  }
+  
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .my-3 {
+    text-align: center !important;
+  }
+  
+  .form-label {
+    text-align: center !important;
+  }
+  
+  .btn {
+    width: 80% !important;
+    margin: 0 auto 0.5rem auto !important;
+  }
+  
+  .form-control, .form-select, .form-range {
+    margin: 0 auto !important;
+    max-width: 80% !important;
+  }
+  
+  p {
+    text-align: center !important;
+  }
+  
+  .form-check-inline {
+    display: inline-block !important;
+    margin-right: 1rem !important;
+  }
 }

@@ -3,11 +3,12 @@ function RbGroup({ label, id, dataIn, handleData, selectedValue }) {
       handleData(e.target.value, id);
     };
   
-    return (
-      <div id={id}>
-        <div className="mb-1">{label}</div>
+      return (
+    <div id={id}>
+      <div className="mb-1">{label}</div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
         {dataIn.map((item, index) => (
-          <div key={index} className="form-check form-check-inline">
+          <div key={index} className="form-check">
             <input
               className="form-check-input"
               type="radio"
@@ -23,7 +24,8 @@ function RbGroup({ label, id, dataIn, handleData, selectedValue }) {
           </div>
         ))}
       </div>
-    );
+    </div>
+  );
   }
   
   export default RbGroup;

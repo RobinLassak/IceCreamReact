@@ -135,10 +135,10 @@ function App() {
   console.log("scitanec2:", scitanec2);
 
   return (
-    <div className="bg-info-subtle vw-100 vh-100 py-5">
+    <div className="bg-info-subtle vw-100 vh-100 d-flex d-lg-flex align-items-start align-items-lg-center justify-content-center">
       <div className="container bg-warning-subtle">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className="my-3">
               <p>
                 {prichut} {kopecky} kopecky s{" "}
@@ -204,16 +204,16 @@ function App() {
             </div>
             <div className="my-3">
               <div className="row">
-                <div className="col-3">
+                <div className="col-12 col-sm-3">
                   <Clock />
                 </div>
-                <div className="col-9">
+                <div className="col-12 col-sm-9">
                   <p>Zbyva {disk}% mista na disku.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-lg-6">
             <div className="my-3">
               <ProgressBar id="progress" dataIn={progress} />
             </div>
@@ -222,7 +222,7 @@ function App() {
             </div>
             <div className="my-3">
               <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-md-6">
                   <TextBox
                     label="Scitanec 1:"
                     id="scitanec1"
@@ -230,7 +230,7 @@ function App() {
                     handleData={handleData}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6">
                   <TextBox
                     label="Scitanec 2:"
                     id="scitanec2"
@@ -242,14 +242,14 @@ function App() {
             </div>
             <div className="my-3">
               <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-md-6 d-flex justify-content-start">
                   <Button
                     label="Secti"
                     id="btn-soucet"
                     handleEvent={handlerEvent}
                   />
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6">
                   <span>
                     <b>{vysledek}</b>
                   </span>
@@ -267,10 +267,10 @@ function App() {
             </div>
             <div className="my-3">
               <div className="row">
-                <div className="col-8">
+                <div className="col-12 col-md-6">
                   <File id="vyberSouboru" handleData={handleData} />
                 </div>
-                <div className="col-4">
+                <div className="col-12 col-md-6 d-flex justify-content-end">
                   <Button
                     label="Stahni soubor"
                     id="btn-stazeni"

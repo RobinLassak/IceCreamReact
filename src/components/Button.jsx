@@ -10,6 +10,7 @@ function Button({ label, handleEvent, id }) {
       id={id}
       onClick={handleClick}
       className="btn btn-outline-secondary"
+      style={{ height: '38px' }}
     >
       {label}
     </button>

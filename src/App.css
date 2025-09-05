@@ -1,1 +1,120 @@
+/* Responzivní úpravy pro mobilní zařízení */
+@media (max-width: 768px) {
+  /* Vynutí centrování na malých obrazovkách */
+  .bg-warning-subtle {
+    text-align: center !important;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+  }
+  
+  .form-check-inline {
+    display: inline-block !important;
+    margin-bottom: 0.5rem !important;
+    text-align: center !important;
+    margin-right: 1rem !important;
+  }
+  
+  .form-check {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .form-check-input {
+    margin-right: 0.5rem !important;
+  }
+  
+  .btn {
+    width: 80% !important;
+    margin: 0 auto 0.5rem auto !important;
+    display: block !important;
+  }
+  
+  .form-control, .form-select, .form-range {
+    margin: 0 auto !important;
+    display: block !important;
+    max-width: 80% !important;
+  }
+  
+  .form-label {
+    text-align: center !important;
+    display: block !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .progress {
+    margin: 0 auto !important;
+  }
+  
+  p {
+    text-align: center !important;
+  }
+  
+  .row {
+    justify-content: center !important;
+  }
+  
+  /* Úpravy pro lepší zobrazení sloupců na malých obrazovkách */
+  .col-md-6 {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Zmenší padding na malých obrazovkách */
+  .my-3 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
 
+/* Úpravy pro malé mobily */
+@media (max-width: 400px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .form-control, .form-select {
+    font-size: 16px; /* Zabrání zoomu na iOS */
+  }
+}
+
+/* Úpravy pro tablety */
+@media (min-width: 769px) and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .my-3 {
+    text-align: center;
+  }
+  
+  .form-label {
+    text-align: center;
+  }
+}
+
+/* Úpravy pro velké obrazovky */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Symetrické odsazení pouze na malých obrazovkách */
+@media (max-width: 991px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

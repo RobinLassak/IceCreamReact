@@ -6,7 +6,7 @@ function NumImp({ dataIn, label, handleData, id }) {
   };
 
   return (
-    <>
+    <div className="d-flex flex-column align-items-center">
       <label className="form-label" htmlFor={id}>
         {label}
       </label>
@@ -16,8 +16,9 @@ function NumImp({ dataIn, label, handleData, id }) {
         value={dataIn}
         id={id}
         onChange={handleChange}
+        style={{ maxWidth: '80%' }}
       />
-    </>
+    </div>
   );
 }
 

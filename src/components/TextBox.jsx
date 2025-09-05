@@ -5,7 +5,7 @@ function TextBox({ label, handleData, id, selectedValue }) {
     handleData(e.target.value, id);
   };
   return (
-    <>
+    <div className="d-flex flex-column align-items-center">
       <label className="form-label" htmlFor={id}>
         {label}
       </label>
@@ -16,7 +16,7 @@ function TextBox({ label, handleData, id, selectedValue }) {
         value={selectedValue}
         id={id}
       />
-    </>
+    </div>
   );
 }
 
