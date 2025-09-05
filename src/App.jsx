@@ -142,7 +142,7 @@ function App() {
             <div className="my-3">
               <p>
                 {prichut} {kopecky} kopecky s{" "}
-                {pridavky.map((pridavek) => pridavek + "")}, {druh}
+                {pridavky.join(", ")}, {druh}
               </p>
             </div>
             <div className="my-3">
